@@ -3,10 +3,491 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Obaid Alkhammash | AI Engineer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Three.js for 3D Model -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div >
-    <embed style ="height: 100vh; width: 100%;" src= "R blue.pdf" type="application/pdf" width="100%" height="600px" />
+    <!-- Interactive Background -->
+    <canvas id="network-canvas"></canvas>
+    
+    <!-- Cursor Glow -->
+    <div id="cursor-glow"></div>
+
+    <!-- HUD Overlay (Fixed) -->
+    <div class="hud-overlay">
+        <div class="hud-top-left decode-text">AI_ENGINEER // ONLINE</div>
+        <div class="hud-top-right">
+            <!-- Theme Switcher -->
+            <div class="theme-switcher">
+                <div class="theme-dot" data-color="#00ffff" style="background: #00ffff;" title="Cyan"></div>
+                <div class="theme-dot" data-color="#00ff41" style="background: #00ff41;" title="Matrix Green"></div>
+                <div class="theme-dot" data-color="#b829ff" style="background: #b829ff;" title="Electric Purple"></div>
+                <div class="theme-dot" data-color="#ff3366" style="background: #ff3366;" title="Neon Pink"></div>
+            </div>
+        </div>
     </div>
+
+    <main class="scroll-container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="logo-3d-container" id="three-brain-container">
+                    <!-- WebGL Brain Model will be injected here -->
+                </div>
+                <h1 class="decode-text title">OMAR OBAID ALKHAMMASH</h1>
+                <h2 class="decode-text subtitle">Artificial Intelligence Engineer & Data Analyst</h2>
+                
+                <div class="hero-nav">
+                    <a href="#about" class="nav-link decode-text">[ About Me ]</a>
+                    <a href="#projects" class="nav-link decode-text">[ View My Work ]</a>
+                    <a href="#activity" class="nav-link decode-text">[ Activity Feed ]</a>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://github.com/OmarA32" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/omar-alkhammash-104b9b350/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#contact"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <h2 class="section-title decode-text">About Me</h2>
+            <div class="about-container glass-panel fade-in">
+                <p>I'm a fresh Artificial Intelligence graduate from the University of Jeddah with strong expertise in machine learning, deep learning, Generative AI (LLMs, NLP), Computer Vision, and MLOps (Docker, Conda, MLFlow). Selected among the top 100 of 23,000+ participants in the KAUST Academy AI program. Recognized for pioneering the first JEPA-based Text-to-Speech (TTS) model. Proficient in orchestrating both cloud and local agentic workflows utilizing Claude Code, Antigravity, and local Large Language Models (Gemma, Qwen) integrated with the Model Context Protocol (MCP). Built multiple AI projects, including a full-stack human activity recognition system using Vision Transformers that relies exclusively on Wi-Fi signals, alongside experience integrating CloudFlare custom APIs. Former Data Analyst Intern at Makkah Health Cluster, leveraging healthcare data, SQL, and Power BI to generate AI-driven insights.</p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <h2 class="section-title decode-text">Featured Projects</h2>
+            <div class="projects-grid">
+                
+                <!-- Project 5: JEPA TTS -->
+                <div class="project-card glass-panel">
+                    <div class="card-glow"></div>
+                    <img src="https://opengraph.githubassets.com/1/OmarA32/JEPA-TTS" alt="GitHub Project Preview" class="repo-image">
+                    <div class="card-content">
+                        <h3>JEPA TTS (Text-to-Speech)</h3>
+                        <p>Advanced Text-to-Speech system leveraging Joint-Embedding Predictive Architecture (JEPA) for highly natural voice synthesis and representation learning.</p>
+                        <div class="tech-tags">
+                            <span>Deep Learning</span>
+                            <span>JEPA</span>
+                            <span>TTS</span>
+                            <span>Python</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/OmarA32" target="_blank"><i class="fab fa-github"></i> View Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 1 -->
+                <div class="project-card glass-panel">
+                    <div class="card-glow"></div>
+                    <!-- Replace 'Repo-Name' with actual repo name -->
+                    <img src="https://opengraph.githubassets.com/1/OmarA32/Human-Activity-Recognition-ViT" alt="GitHub Project Preview" class="repo-image">
+                    <div class="card-content">
+                        <h3>Human Activity Recognition via Wi-Fi CSI</h3>
+                        <p>Full-stack system classifying human activities without cameras using Wi-Fi Channel State Information. Built with Vision Transformers (ViT) for activity recognition.</p>
+                        <div class="tech-tags">
+                            <span>Deep Learning</span>
+                            <span>ViT</span>
+                            <span>Python</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/OmarA32" target="_blank"><i class="fab fa-github"></i> View Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-panel">
+                    <div class="card-glow"></div>
+                    <img src="https://opengraph.githubassets.com/1/OmarA32/House-Price-Prediction-PyTorch" alt="GitHub Project Preview" class="repo-image">
+                    <div class="card-content">
+                        <h3>House Price Prediction & Clustering</h3>
+                        <p>Full-stack program featuring a custom encoder-decoder architecture in PyTorch, neural network regressor, and Gaussian Mixture Model clustering. GUI via Tkinter.</p>
+                        <div class="tech-tags">
+                            <span>PyTorch</span>
+                            <span>GMM</span>
+                            <span>Tkinter</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/OmarA32" target="_blank"><i class="fab fa-github"></i> View Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-panel">
+                    <div class="card-glow"></div>
+                    <img src="https://opengraph.githubassets.com/1/OmarA32/Employee-Management-System" alt="GitHub Project Preview" class="repo-image">
+                    <div class="card-content">
+                        <h3>Employee Management System</h3>
+                        <p>Desktop application to store, manage, and track employee information using a custom-built singly linked list architecture and Java Swing GUI.</p>
+                        <div class="tech-tags">
+                            <span>Java</span>
+                            <span>Swing</span>
+                            <span>Data Structures</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/OmarA32" target="_blank"><i class="fab fa-github"></i> View Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card glass-panel">
+                    <div class="card-glow"></div>
+                    <img src="https://opengraph.githubassets.com/1/OmarA32/Discord-Chat-Bot" alt="GitHub Project Preview" class="repo-image">
+                    <div class="card-content">
+                        <h3>Discord Chat-Bot</h3>
+                        <p>Advanced community management bot featuring more than 150 custom commands and utilities, written completely in JavaScript.</p>
+                        <div class="tech-tags">
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                            <span>Discord.js</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://github.com/OmarA32" target="_blank"><i class="fab fa-github"></i> View Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Activity Feed Section -->
+        <section id="activity" class="activity-section">
+            <h2 class="section-title decode-text">Activity Feed</h2>
+            <div class="activity-grid">
+                
+                <!-- LinkedIn Post 1 (IELTS) -->
+                <div class="activity-card glass-panel">
+                    <div class="card-glow"></div>
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7480013262483546113" height="600" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                </div>
+
+                <!-- LinkedIn Post 2 (Graduation) -->
+                <div class="activity-card glass-panel">
+                    <div class="card-glow"></div>
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7475940651210080256" height="600" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                </div>
+
+                <!-- LinkedIn Post 3 (Grad Project) -->
+                <div class="activity-card glass-panel">
+                    <div class="card-glow"></div>
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7473838697323454464" height="600" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                </div>
+
+                <!-- LinkedIn Post 4 (KAUST Acceptance) -->
+                <div class="activity-card glass-panel">
+                    <div class="card-glow"></div>
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7437903774939258880" height="600" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                </div>
+
+            </div>
+
+            <!-- Languages Box -->
+            <div class="horizontal-panels-container" style="margin-top: 4rem;">
+                <div class="horizontal-bento-box glass-panel fade-in">
+                    <h3 class="decode-text"><i class="fas fa-language"></i> Languages</h3>
+                    <div class="flex-row-between">
+                        <div class="exam-item">
+                            <h4>Arabic</h4>
+                            <span class="score" style="font-size: 1.3rem;">Native</span>
+                        </div>
+                        <div class="exam-item">
+                            <h4>English</h4>
+                            <span class="score" style="font-size: 1.3rem;">Professional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Skills Section -->
+        <section id="diagnostics" class="diagnostics-section">
+            <h2 class="section-title decode-text">Experience & Skills</h2>
+            
+            <div class="diagnostics-container">
+                <div class="timeline-panel glass-panel">
+                    <h3 class="decode-text mb-4"><i class="fas fa-briefcase"></i> Experience</h3>
+                    <div class="timeline" style="margin-bottom: 3rem;">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>AI Intern @ KAUST Academy</h4>
+                                <span class="date">06/2026 - 08/2026</span>
+                                <p>8-week AI Summer Program at KAUST Academy, specializing in advanced machine learning, Computer Vision, NLP, and Reinforcement Learning. Leveraged Python, linear algebra, and deep learning libraries to explore AI applications in the physical sciences and Graph Neural Networks.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Data Analyst Intern @ Makkah Health Cluster</h4>
+                                <span class="date">06/2025 - 08/2025</span>
+                                <p>Working on healthcare data projects involving Power BI, data warehousing, SQL, and AI-driven insights. Supported HIT systems, and IT infrastructure, contributing to digital transformation efforts.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="decode-text mb-4"><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="timeline" style="margin-bottom: 3rem;">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>B.S. Artificial Intelligence @ University of Jeddah</h4>
+                                <span class="date">08/2021 - 07/2026 | GPA: 4.68/5</span>
+                                <p>Python, Java, C/C++, Project Management, AI, ML, NLP, Computer Vision, Image Processing, Neural Networks, and Deep Learning</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-bento">
+                    <div class="bento-box glass-panel">
+                        <i class="fas fa-code bento-icon"></i>
+                        <h4>Languages</h4>
+                        <div class="skills-grid">
+                            <span>Python</span><span>C++</span><span>Java</span><span>SQL</span><span>JavaScript (Node.js)</span><span>Rust</span><span>HTML</span><span>CSS</span><span>OOP</span>
+                        </div>
+                    </div>
+                    <div class="bento-box glass-panel">
+                        <i class="fas fa-brain bento-icon"></i>
+                        <h4>AI & Machine Learning</h4>
+                        <div class="skills-grid">
+                            <span>Machine Learning</span><span>Deep Learning</span><span>NLP</span><span>Computer Vision</span><span>Reinforcement Learning</span><span>ViT</span><span>AI Engineering</span>
+                        </div>
+                    </div>
+                    <div class="bento-box glass-panel">
+                        <i class="fas fa-database bento-icon"></i>
+                        <h4>Data & Libraries</h4>
+                        <div class="skills-grid">
+                            <span>Data Science</span><span>Data Analysis</span><span>Data Visualization</span><span>PyTorch</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span>
+                        </div>
+                    </div>
+                    <div class="bento-box glass-panel">
+                        <i class="fas fa-tools bento-icon"></i>
+                        <h4>Tools & MLOps</h4>
+                        <div class="skills-grid">
+                            <span>Docker</span><span>Conda</span><span>Power BI</span><span>MS Excel</span><span>MS Project</span><span>Project Management</span><span>Agentic Workflows</span><span>MLOps</span><span>GCP</span><span>MLflow</span><span>Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="horizontal-panels-container">
+                <!-- EXAMS -->
+                <div class="horizontal-bento-box glass-panel fade-in">
+                    <h3 class="decode-text"><i class="fas fa-file-alt"></i> Exams</h3>
+                    <div class="flex-row-between">
+                        <div class="exam-item">
+                            <h4>IELTS Academic</h4>
+                            <span class="score">Score: 7.5</span>
+                        </div>
+                        <div class="exam-item">
+                            <h4>STEP</h4>
+                            <span class="score">Score: 93</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COURSES -->
+                <div class="horizontal-bento-box glass-panel fade-in">
+                    <h3 class="decode-text"><i class="fas fa-book-open"></i> Courses</h3>
+                    <div class="courses-grid">
+                        <div class="course-item">
+                            <span class="course-provider">KAUST Academy</span>
+                            <h4>The Introductory Artificial Intelligence Training Program</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Artificial Intelligence, Neural Networks</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">DeepLearning.AI</span>
+                            <h4>Deep Learning Specialization</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Artificial Intelligence, Neural Networks</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">SDAIA (52hrs)</span>
+                            <h4>Advanced Pathways in Artificial Intelligence</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Artificial Intelligence, Neural Networks, Machine Learning</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">Maven Analytics (17hrs)</span>
+                            <h4>Microsoft Power BI Desktop for Business Intelligence</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Business Intelligence, Data Visualization</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">University of Michigan (39hrs)</span>
+                            <h4>Python 3 Programming Specialization</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Python Programming, Software Development</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">IBM (12hrs)</span>
+                            <h4>Exploratory Data Analysis for Machine Learning</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Data Analysis, Machine Learning, Python</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">IBM (15hrs)</span>
+                            <h4>Supervised Machine Learning: Regression</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Machine Learning, Python</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">Huawei</span>
+                            <h4>HCIA-Datacom 1.0V</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Big Data</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">Huawei</span>
+                            <h4>HCIA-Cloud Computing 5.5V</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Cloud Computing</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">Huawei</span>
+                            <h4>HCIA-Cloud Services 3.5V</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Cloud Computing</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">Huawei</span>
+                            <h4>HCIA-AI 3.5V</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Machine Learning, Artificial Intelligence</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">DeepLearning.AI</span>
+                            <h4>Probability & Statistics for Machine Learning & Data Science</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Neural Networks</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">DeepLearning.AI</span>
+                            <h4>Calculus for Machine Learning and Data Science</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Neural Networks</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">DeepLearning.AI</span>
+                            <h4>Linear Algebra for Machine Learning and Data Science</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Neural Networks</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">DeepLearning.AI</span>
+                            <h4>Sequence Models</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Neural Networks</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">DeepLearning.AI</span>
+                            <h4>Neural Networks and Deep Learning</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Neural Networks</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">DeepLearning.AI</span>
+                            <h4>Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Neural Networks</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">DeepLearning.AI</span>
+                            <h4>Convolutional Neural Networks</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Neural Networks</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">DeepLearning.AI</span>
+                            <h4>Structuring Machine Learning Projects</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Neural Networks</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">KAUST Academy</span>
+                            <h4>The Advanced Artificial Intelligence Training Program</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Artificial Intelligence, Neural Networks</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">University of Michigan</span>
+                            <h4>Data Collection and Processing with Python</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Data Analysis, Data Visualization</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">University of Michigan</span>
+                            <h4>Python Basics</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Python Programming, Syntax</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">University of Michigan</span>
+                            <h4>Python Functions, Files, and Dictionaries</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Python Programming, Data Structures</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">University of Michigan</span>
+                            <h4>Python Classes and Inheritance</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Object-Oriented Programming (OOP), Python</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">University of Michigan</span>
+                            <h4>Introduction to Data Science in Python</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Data Analysis, Data Visualization</p>
+                        </div>
+                        <div class="course-item">
+                            <span class="course-provider">DeepLearning.AI</span>
+                            <h4>Mathematics for Machine Learning and Data Science Specialization</h4>
+                            <p style="font-size: 0.8rem; color: #8892b0; margin-top: 0.5rem; margin-bottom: 0;">Skills: Neural Networks, Data Analysis</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CERTIFICATIONS -->
+                <div class="horizontal-bento-box glass-panel fade-in">
+                    <h3 class="decode-text"><i class="fas fa-certificate"></i> Certifications</h3>
+                    <div class="flex-row-between">
+                        <div class="cert-item future">
+                            <i class="fas fa-hourglass-half"></i>
+                            <h4>Future: Google Cloud Professional ML Engineer Certification</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title decode-text">Get In Touch</h2>
+            <div class="contact-container glass-panel">
+                <p class="contact-desc">Currently open to new opportunities in AI, Machine Learning, and Data Science. Send me a message and let's build something great.</p>
+                
+                <!-- Formspree Integration (Replace 'your_id' with real Formspree endpoint) -->
+                <form action="https://formspree.io/f/your_id" method="POST" class="contact-form">
+                    <div class="input-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Hello Omar..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Designed and Built by Omar Obaid Alkhammash &copy; 2026</p>
+        </footer>
+    </main>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
