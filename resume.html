@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Omar Obaid Alkhammash</title>
+    
+    <!-- OpenGraph & Social Embeds -->
+    <meta property="og:title" content="Resume | Omar Obaid Alkhammash">
+    <meta property="og:description" content="Resume of Omar Alkhammash | AI Engineer/Specialist">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://omara32.github.io/resume.html">
+    <meta property="og:image" content="https://omara32.github.io/images/social-preview.png">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Resume | Omar Obaid Alkhammash">
+    <meta name="twitter:description" content="Resume of Omar Alkhammash | AI Engineer/Specialist">
+    <meta name="twitter:image" content="https://omara32.github.io/images/social-preview.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        .resume-container {
+            width: 100%;
+            height: 80vh;
+            margin-top: 2rem;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+        }
+        
+        .resume-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: rgba(0, 255, 255, 0.1);
+            color: var(--cyan);
+            text-decoration: none;
+            border: 1px solid var(--cyan);
+            border-radius: 4px;
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: rgba(0, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- Interactive Background -->
+    <canvas id="network-canvas"></canvas>
+    
+    <!-- Cursor Glow -->
+    <div id="cursor-glow"></div>
+
+    <!-- HUD Overlay (Fixed) -->
+    <div class="hud-overlay">
+        <div class="hud-top-left decode-text">AI_ENGINEER // RESUME</div>
+        <div class="hud-top-right">
+            <!-- Theme Switcher -->
+            <div class="theme-switcher">
+                <i class="fas fa-moon active"></i>
+                <i class="fas fa-sun"></i>
+            </div>
+            <div id="clock" class="digital-clock">00:00:00</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Resume Section -->
+        <section class="section" id="resume" style="padding-top: 100px;">
+            <div class="resume-header">
+                <a href="index.html" class="nav-link decode-text" style="font-size: 1.2rem; color: var(--cyan); text-decoration: none;">
+                    <i class="fas fa-arrow-left"></i> [ Back to Portfolio ]
+                </a>
+                
+                <a href="resume.pdf" class="btn" download>
+                    <i class="fas fa-download"></i> Download PDF
+                </a>
+            </div>
+            
+            <div class="resume-container glass-panel">
+                <embed src="resume.pdf" type="application/pdf" width="100%" height="100%">
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Designed and Built by Omar Obaid Alkhammash &copy; 2026</p>
+        </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
